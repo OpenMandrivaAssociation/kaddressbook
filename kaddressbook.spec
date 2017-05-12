@@ -59,7 +59,6 @@ KDE addressbook application.
 %{_sysconfdir}/xdg/kaddressbook.categories
 %{_sysconfdir}/xdg/kaddressbook.renamecategories
 %{_sysconfdir}/xdg/kaddressbook_themes.knsrc
-%{_xmlguidir}/kaddressbook/kaddressbookui.rc
 %{_datadir}/metainfo/org.kde.kaddressbook.appdata.xml
 %{_qt5_plugindir}/kaddressbook_config_plugins.so
 %{_qt5_plugindir}/kaddressbookpart.so
