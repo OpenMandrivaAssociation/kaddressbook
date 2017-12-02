@@ -1,6 +1,6 @@
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -58,7 +58,6 @@ KDE addressbook application.
 %{_kde5_services}/kontact/kaddressbookplugin.desktop
 %{_sysconfdir}/xdg/kaddressbook.categories
 %{_sysconfdir}/xdg/kaddressbook.renamecategories
-%{_sysconfdir}/xdg/kaddressbook_themes.knsrc
 %{_datadir}/metainfo/org.kde.kaddressbook.appdata.xml
 %{_qt5_plugindir}/kaddressbook_config_plugins.so
 %{_qt5_plugindir}/kaddressbookpart.so
