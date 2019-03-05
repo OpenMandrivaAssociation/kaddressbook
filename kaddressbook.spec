@@ -2,7 +2,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	18.12.2
+Version:	18.12.3
 Release:	1
 Epoch:		3
 License:	GPLv2+
