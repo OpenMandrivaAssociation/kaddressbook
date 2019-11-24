@@ -2,7 +2,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	19.08.3
+Version:	19.11.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -93,4 +93,4 @@ KDE PIM shared library.
 %install
 %ninja_install -C build
 
-%find_lang %{name}
+%find_lang %{name} --all-name --with-html
