@@ -94,5 +94,3 @@ KDE PIM shared library.
 %ninja_install -C build
 
 %find_lang %{name} --all-name --with-html
-
-strip --strip-unneeded %{buildroot}%{_bindir}/*
