@@ -2,13 +2,13 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DBusAddons)
 BuildRequires:	cmake(KF5DocTools)
@@ -94,3 +94,5 @@ KDE PIM shared library.
 %ninja_install -C build
 
 %find_lang %{name} --all-name --with-html
+
+strip --strip-unneeded %{buildroot}%{_bindir}/*
