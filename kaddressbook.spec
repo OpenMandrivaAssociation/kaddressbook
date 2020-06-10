@@ -2,7 +2,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	20.04.1
+Version:	20.04.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -57,12 +57,14 @@ KDE addressbook application.
 %{_datadir}/kontact/ksettingsdialog/kaddressbook.setdlg
 %{_iconsdir}/hicolor/*/apps/kaddressbook.*
 %{_kde5_services}/kaddressbook_config_plugins.desktop
+%{_kde5_services}/kaddressbook_config_userfeedback.desktop
 %{_kde5_services}/kaddressbookpart.desktop
 %{_kde5_services}/kontact/kaddressbookplugin.desktop
 %{_datadir}/qlogging-categories5/kaddressbook.categories
 %{_datadir}/qlogging-categories5/kaddressbook.renamecategories
 %{_datadir}/metainfo/org.kde.kaddressbook.appdata.xml
 %{_qt5_plugindir}/kaddressbook_config_plugins.so
+%{_qt5_plugindir}/kaddressbook_config_userfeedback.so
 %{_qt5_plugindir}/kaddressbookpart.so
 %{_qt5_plugindir}/kontact_kaddressbookplugin.so
 
