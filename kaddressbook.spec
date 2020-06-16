@@ -30,6 +30,7 @@ BuildRequires:	cmake(KF5GrantleeTheme)
 BuildRequires:	cmake(Gpgmepp)
 BuildRequires:	cmake(KF5AkonadiSearch)
 BuildRequires:	cmake(KF5Prison)
+BuildRequires:	cmake(KUserFeedback)
 BuildRequires:	boost-devel
 BuildRequires:	sasl-devel
 BuildRequires:	pkgconfig(Qt5Core)
