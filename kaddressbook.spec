@@ -2,7 +2,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -22,7 +22,6 @@ BuildRequires:	cmake(KF5AkonadiMime)
 BuildRequires:	cmake(KF5KontactInterface)
 BuildRequires:	cmake(KF5CalendarCore)
 BuildRequires:	cmake(KF5Libkdepim)
-BuildRequires:	cmake(KF5KdepimDBusInterfaces)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
 BuildRequires:	cmake(KF5KaddressbookGrantlee)
 BuildRequires:	cmake(KF5KaddressbookImportExport)
@@ -59,7 +58,6 @@ KDE addressbook application.
 %{_iconsdir}/hicolor/*/apps/kaddressbook.*
 %{_kde5_services}/kaddressbook_config_plugins.desktop
 %{_kde5_services}/kaddressbook_config_userfeedback.desktop
-%{_kde5_services}/kaddressbookpart.desktop
 %{_kde5_services}/kontact/kaddressbookplugin.desktop
 %{_datadir}/qlogging-categories5/kaddressbook.categories
 %{_datadir}/qlogging-categories5/kaddressbook.renamecategories
@@ -67,7 +65,8 @@ KDE addressbook application.
 %{_qt5_plugindir}/kaddressbook_config_plugins.so
 %{_qt5_plugindir}/kaddressbook_config_userfeedback.so
 %{_qt5_plugindir}/kaddressbookpart.so
-%{_qt5_plugindir}/kontact_kaddressbookplugin.so
+%{_qt5_plugindir}/kontact5/kontact_kaddressbookplugin.so
+%{_datadir}/applications/kaddressbook-view.desktop
 
 #----------------------------------------------------------------------------
 
