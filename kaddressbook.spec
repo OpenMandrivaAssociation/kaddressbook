@@ -1,8 +1,10 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%define libname %mklibname KPimAddressbookImportExport 5
+%define devname %mklibname -d KPimAddressbookImportExport
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	20.08.3
+Version:	20.11.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -82,6 +84,36 @@ KDE PIM shared library.
 
 %files -n %{libkaddressbookprivate}
 %{_kde5_libdir}/libkaddressbookprivate.so.%{kaddressbookprivate_major}*
+
+#----------------------------------------------------------------------------
+
+%package -n %{libname}
+Summary:	Library for address book import/export
+Group:		System/Libraries
+
+%description -n %{libname}
+KDE PIM address book shared library.
+
+%files -n %{libname}
+%{_libdir}/libKPimAddressbookImportExport.so.5*
+
+#----------------------------------------------------------------------------
+
+%package -n %{devname}
+Summary:	Headers for the address book import/export library
+Group:		Development/Libraries
+Requires:	%{libname} = %{EVRD}
+
+%description -n %{devname}
+Headers for the address book import/export library
+
+%files -n %{devname}
+%{_libdir}/libKPimAddressbookImportExport.so
+%{_includedir}/KPim/KAddressBookImportExport
+%{_includedir}/KPim/kaddressbookimportexport
+%{_includedir}/KPim/kaddressbookimportexport_version.h
+%{_libdir}/cmake/KPimAddressbookImportExport
+%{_libdir}/qt5/mkspecs/modules/qt_KAddressbookImportExport.pri
 
 #----------------------------------------------------------------------
 
