@@ -4,7 +4,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -64,8 +64,8 @@ KDE addressbook application.
 %{_datadir}/qlogging-categories5/kaddressbook.categories
 %{_datadir}/qlogging-categories5/kaddressbook.renamecategories
 %{_datadir}/metainfo/org.kde.kaddressbook.appdata.xml
-%{_qt5_plugindir}/kaddressbook_config_plugins.so
-%{_qt5_plugindir}/kaddressbook_config_userfeedback.so
+%{_qt5_plugindir}/pim/kcms/kaddressbook/kaddressbook_config_plugins.so
+%{_qt5_plugindir}/pim/kcms/kaddressbook/kaddressbook_config_userfeedback.so
 %{_qt5_plugindir}/kaddressbookpart.so
 %{_qt5_plugindir}/kontact5/kontact_kaddressbookplugin.so
 %{_datadir}/applications/kaddressbook-view.desktop
