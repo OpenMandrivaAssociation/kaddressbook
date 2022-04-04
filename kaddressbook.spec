@@ -62,9 +62,11 @@ KDE addressbook application.
 %{_datadir}/qlogging-categories5/kaddressbook.renamecategories
 %{_datadir}/metainfo/org.kde.kaddressbook.appdata.xml
 %{_qt5_plugindir}/pim/kcms/kaddressbook/kaddressbook_config_plugins.so
+%{_qt5_plugindir}/pim/kcms/kaddressbook/kaddressbook_config_userfeedback.so
 %{_qt5_plugindir}/kaddressbookpart.so
 %{_qt5_plugindir}/kontact5/kontact_kaddressbookplugin.so
 %{_datadir}/applications/kaddressbook-view.desktop
+%{_datadir}/kservices5/kaddressbook_config_userfeedback.desktop
 
 #----------------------------------------------------------------------------
 
