@@ -4,7 +4,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	22.04.0
+Version:	22.04.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
