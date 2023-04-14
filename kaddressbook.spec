@@ -1,11 +1,13 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define libname %mklibname KPimAddressbookImportExport 5
-%define devname %mklibname -d KPimAddressbookImportExport
+%define oldlibname %mklibname KPimAddressbookImportExport 5
+%define olddevname %mklibname -d KPimAddressbookImportExport
+%define libname %mklibname KPim5AddressbookImportExport
+%define devname %mklibname -d KPim5AddressbookImportExport
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -68,11 +70,13 @@ KDE addressbook application.
 #----------------------------------------------------------------------------
 
 %define kaddressbookprivate_major 5
-%define libkaddressbookprivate %mklibname kaddressbookprivate %{kaddressbookprivate_major}
+%define oldlibkaddressbookprivate %mklibname kaddressbookprivate 5
+%define libkaddressbookprivate %mklibname kaddressbookprivate
 
 %package -n %{libkaddressbookprivate}
 Summary:	KDE PIM shared library
 Group:		System/Libraries
+%rename %{oldlibkaddressbookprivate}
 
 %description -n %{libkaddressbookprivate}
 KDE PIM shared library.
@@ -85,12 +89,13 @@ KDE PIM shared library.
 %package -n %{libname}
 Summary:	Library for address book import/export
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 KDE PIM address book shared library.
 
 %files -n %{libname}
-%{_libdir}/libKPimAddressbookImportExport.so.5*
+%{_libdir}/libKPim5AddressbookImportExport.so.5*
 
 #----------------------------------------------------------------------------
 
@@ -98,22 +103,24 @@ KDE PIM address book shared library.
 Summary:	Headers for the address book import/export library
 Group:		Development/Libraries
 Requires:	%{libname} = %{EVRD}
+%rename %{olddevname}
 
 %description -n %{devname}
 Headers for the address book import/export library
 
 %files -n %{devname}
-%{_libdir}/libKPimAddressbookImportExport.so
-%{_includedir}/KPim/KAddressBookImportExport
-%{_includedir}/KPim/kaddressbookimportexport
-%{_includedir}/KPim/kaddressbookimportexport_version.h
+%{_libdir}/libKPim5AddressbookImportExport.so
+%{_includedir}/KPim5/KAddressBookImportExport
+%{_includedir}/KPim5/kaddressbookimportexport
+%{_includedir}/KPim5/kaddressbookimportexport_version.h
 %{_libdir}/cmake/KPimAddressbookImportExport
+%{_libdir}/cmake/KPim5AddressbookImportExport
 %{_libdir}/qt5/mkspecs/modules/qt_KAddressbookImportExport.pri
 
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
