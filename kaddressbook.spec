@@ -6,7 +6,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -21,15 +21,15 @@ BuildRequires:	cmake(KF5Crash)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5PimTextEdit)
-BuildRequires:	cmake(KF5Akonadi)
-BuildRequires:	cmake(KF5AkonadiMime)
-BuildRequires:	cmake(KF5KontactInterface)
+BuildRequires:	cmake(KPim5Akonadi)
+BuildRequires:	cmake(KPim5AkonadiMime)
+BuildRequires:	cmake(KPim5KontactInterface)
 BuildRequires:	cmake(KF5CalendarCore)
 BuildRequires:	cmake(KF5Libkdepim)
-BuildRequires:	cmake(KF5PimCommonAkonadi)
+BuildRequires:	cmake(KPim5PimCommonAkonadi)
 BuildRequires:	cmake(KPim5GrantleeTheme)
 BuildRequires:	cmake(Gpgmepp)
-BuildRequires:	cmake(KF5AkonadiSearch)
+BuildRequires:	cmake(KPim5AkonadiSearch)
 BuildRequires:	cmake(KF5Prison)
 BuildRequires:	cmake(KUserFeedback)
 BuildRequires:	boost-devel
@@ -109,8 +109,6 @@ Headers for the address book import/export library
 %files -n %{devname}
 %{_libdir}/libKPim5AddressbookImportExport.so
 %{_includedir}/KPim5/KAddressBookImportExport
-%{_includedir}/KPim5/kaddressbookimportexport
-%{_includedir}/KPim5/kaddressbookimportexport_version.h
 %{_libdir}/cmake/KPimAddressbookImportExport
 %{_libdir}/cmake/KPim5AddressbookImportExport
 %{_libdir}/qt5/mkspecs/modules/qt_KAddressbookImportExport.pri
