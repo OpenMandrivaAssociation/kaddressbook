@@ -43,10 +43,6 @@ BuildRequires:	cmake(Qt6QuickWidgets)
 BuildRequires:	cmake(Qt6PrintSupport)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Widgets)
-Requires:	grantlee-editor
-Requires:	akonadi-common
-Requires:	kdepim-runtime
-Suggests:	kdepim-addons
 
 %description
 KDE addressbook application.
