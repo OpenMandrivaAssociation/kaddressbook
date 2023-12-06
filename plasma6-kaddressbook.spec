@@ -31,6 +31,7 @@ BuildRequires:	cmake(Gpgmepp)
 BuildRequires:	cmake(KPim6AkonadiSearch)
 BuildRequires:	cmake(KF6Prison)
 BuildRequires:	cmake(KF6UserFeedback)
+BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
 BuildRequires:	cmake(KF6TextTemplate)
 BuildRequires:	boost-devel
 BuildRequires:	sasl-devel
