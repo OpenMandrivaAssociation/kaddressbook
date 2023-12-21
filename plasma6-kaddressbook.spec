@@ -34,6 +34,7 @@ BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
 BuildRequires:	cmake(KF6TextTemplate)
 BuildRequires:	boost-devel
 BuildRequires:	sasl-devel
+BuildRequires:	gettext
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6DBus)
