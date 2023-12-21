@@ -7,8 +7,7 @@
 Summary:	KDE addressbook application
 Name:		plasma6-kaddressbook
 Version:	24.01.80
-Release:	1
-Epoch:		3
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -62,22 +61,8 @@ KDE addressbook application.
 %{_qtdir}/plugins/pim6/kcms/kaddressbook/kaddressbook_config_plugins.so
 %{_qtdir}/plugins/pim6/kcms/kaddressbook/kaddressbook_config_userfeedback.so
 %{_qtdir}/plugins/pim6/kontact/kontact_kaddressbookplugin.so
-
-#----------------------------------------------------------------------------
-
-%define kaddressbookprivate_major 6
-%define oldlibkaddressbookprivate %mklibname kaddressbookprivate 6
-%define libkaddressbookprivate %mklibname kaddressbookprivate
-
-%package -n %{libkaddressbookprivate}
-Summary:	KDE PIM shared library
-Group:		System/Libraries
-%rename %{oldlibkaddressbookprivate}
-
-%description -n %{libkaddressbookprivate}
-KDE PIM shared library.
-
-%files -n %{libkaddressbookprivate}
+# No need for a libpackage with private libs that don't even have headers.
+# Besides they conflict with P5
 %{_libdir}/libkaddressbookprivate.so.%{kaddressbookprivate_major}*
 %{_libdir}/libkaddressbookprivate.so.5*
 
