@@ -64,8 +64,7 @@ KDE addressbook application.
 %{_qtdir}/plugins/pim6/kontact/kontact_kaddressbookplugin.so
 # No need for a libpackage with private libs that don't even have headers.
 # Besides they conflict with P5
-%{_libdir}/libkaddressbookprivate.so.%{kaddressbookprivate_major}*
-%{_libdir}/libkaddressbookprivate.so.5*
+%{_libdir}/libkaddressbookprivate.so*
 
 #----------------------------------------------------------------------------
 
