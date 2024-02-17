@@ -1,3 +1,6 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %define oldlibname %mklibname KPimAddressbookImportExport 6
 %define olddevname %mklibname -d KPimAddressbookImportExport
@@ -6,12 +9,16 @@
 
 Summary:	KDE addressbook application
 Name:		plasma6-kaddressbook
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/pim/kaddressbook/-/archive/%{gitbranch}/kaddressbook-%{gitbranchd}.tar.bz2#/kaddressbook-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kaddressbook-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6DBusAddons)
 BuildRequires:	cmake(KF6DocTools)
@@ -78,7 +85,6 @@ KDE PIM address book shared library.
 
 %files -n %{libname}
 %{_libdir}/libKPim6AddressbookImportExport.so.6*
-%{_libdir}/libKPim6AddressbookImportExport.so.5*
 
 #----------------------------------------------------------------------------
 
@@ -99,7 +105,7 @@ Headers for the address book import/export library
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kaddressbook-%{version}
+%autosetup -p1 -n kaddressbook-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
