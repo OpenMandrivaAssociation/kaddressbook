@@ -9,7 +9,7 @@
 
 Summary:	KDE addressbook application
 Name:		plasma6-kaddressbook
-Version:	24.08.1
+Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
