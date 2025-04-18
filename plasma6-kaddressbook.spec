@@ -38,6 +38,7 @@ BuildRequires:	cmake(KPim6AkonadiSearch)
 BuildRequires:	cmake(KF6Prison)
 BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	cmake(KPim6LdapCore)
+BuildRequires:	cmake(KPim6LdapWidgets)
 BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
 BuildRequires:	cmake(KF6TextTemplate)
 BuildRequires:	boost-devel
