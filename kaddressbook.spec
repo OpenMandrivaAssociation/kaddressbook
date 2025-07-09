@@ -8,7 +8,7 @@
 %define devname %mklibname -d KPim6AddressbookImportExport
 
 Summary:	KDE addressbook application
-Name:		plasma6-kaddressbook
+Name:		kaddressbook
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
