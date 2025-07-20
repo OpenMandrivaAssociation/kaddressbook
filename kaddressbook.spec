@@ -9,7 +9,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -53,6 +53,11 @@ BuildRequires:	cmake(Qt6QuickWidgets)
 BuildRequires:	cmake(Qt6PrintSupport)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Widgets)
+
+%rename plasma6-kaddressbook
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 KDE addressbook application.
@@ -106,19 +111,3 @@ Headers for the address book import/export library
 %{_libdir}/libKPim6AddressbookImportExport.so
 %{_includedir}/KPim6/KAddressBookImportExport
 %{_libdir}/cmake/KPim6AddressbookImportExport
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kaddressbook-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-%find_lang %{name} --all-name --with-html
