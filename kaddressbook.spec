@@ -42,6 +42,7 @@ BuildRequires:	cmake(KPim6LdapWidgets)
 BuildRequires:	cmake(KPim6PimCommonActivities)
 BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
 BuildRequires:	cmake(KF6TextTemplate)
+BuildRequires:	cmake(KF6TextAddonsWidgets)
 BuildRequires:	boost-devel
 BuildRequires:	sasl-devel
 BuildRequires:	gettext
