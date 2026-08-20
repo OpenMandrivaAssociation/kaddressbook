@@ -9,7 +9,7 @@
 
 Summary:	KDE addressbook application
 Name:		kaddressbook
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -58,6 +58,7 @@ BuildRequires:	cmake(Qt6Widgets)
 %rename plasma6-kaddressbook
 
 BuildSystem:	cmake
+BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
@@ -73,6 +74,7 @@ KDE addressbook application.
 %{_datadir}/qlogging-categories6/kaddressbook.categories
 %{_datadir}/qlogging-categories6/kaddressbook.renamecategories
 %{_datadir}/metainfo/org.kde.kaddressbook.appdata.xml
+%{_datadir}/config.kcfg/kaddressbook.kcfg
 %{_qtdir}/plugins/kaddressbookpart.so
 %{_datadir}/applications/kaddressbook-view.desktop
 %{_qtdir}/plugins/pim6/kcms/kaddressbook/kaddressbook_config_plugins.so
